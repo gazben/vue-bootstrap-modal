@@ -1,12 +1,12 @@
 {
-  "name": "vue-bootstrap-modal",
-  "description": "Bootstrap Style Modal for Vue",
-  "version": "0.1.14",
-  "author": "coffce",
+  "name": "vue-bootstrap-modal-2",
+  "description": "Bootstrap Style Modal for Vue.js 2",
+  "version": "0.1.15",
+  "author": "gazben",
   "main": "./src/modal.vue",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Coffcer/vue-bootstrap-modal"
+    "url": "git+https://github.com/gazben/vue-bootstrap-modal"
   },
   "browserify": {
     "transform": [
@@ -26,6 +26,7 @@
   "keywords": [
     "vue",
     "modal",
-    "vue-modal"
+    "vue-modal",
+    "boostrap"
   ]
 }
