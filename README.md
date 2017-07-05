@@ -1,34 +1,20 @@
 # vue-bootstrap-modal
 
-Bootstrap style modal component for vue.
-
-<img src="https://github.com/Coffcer/vue-bootstrap-modal/blob/master/modal.gif">
+Bootstrap style modal component for vue.js 2.
 
 # Usage
 
-import Bootstrap.css
+In the main.js file:
 ```
-<link href="bootstrap.css"></link>
+require('bootstrap-sass')
+import VueModal from '../src/components/helpers/modal/modal.vue'
+Vue.component('modal', VueModal)
 ```
-**NOTE:**  By default, the modal style is pure bootstrap style, you can use any 3rd party bootstrap framework, like above GIF.
 
 
-simple options:
 ``` html
-<!--text content-->
-<modal title="Modal Title" :show.sync="show" @ok="ok" @cancel="cancel">
-    Modal Text
+<modal title="Modal Title" :show.sync="show" @ok="ok" @cancel="cancel" :body="This will be the body"
 </modal>
-
-<!--custom content-->
-<modal title="Modal Title" :show.sync="show" @ok="ok" @cancel="cancel">
-    <div>Modal Body</div>
-    
-    <div slot="header">Modal Header</div>
-    <div slot="title">Modal Title</div>
-    <div slot="footer">Modal Footer</div>
-</modal>
-
 ```
 
 #Props
@@ -42,6 +28,10 @@ props: {
     title: {
         type: String,
         default: 'Modal'
+    },
+    // This text will be shown in the modal body
+    body: {
+        type: String
     },
     // Bootstrap small style modal
     small: {
@@ -81,12 +71,12 @@ props: {
     // [OK button] className
     okClass: {
         type: String,
-        default: 'btn blue'
+        default: 'btn btn-primary'
     },
     // [Cancel button] className
     cancelClass: {
         type: String,
-        default: 'btn red btn-outline'
+        default: 'btn btn-warning'
     },
     // automatically close when click [OK button]
     closeWhenOK: {
